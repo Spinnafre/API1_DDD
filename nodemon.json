@@ -1,0 +1,6 @@
+{
+    "watch":["src","bin","forest","test","scripts"],
+    "ext":".ts,.js,.pub,.css",
+    "ignore":[],
+    "exec":"ts-node ./bin/www.ts"
+}

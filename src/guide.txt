@@ -1,0 +1,4 @@
+infra -> Tudo o que for necessário para aplicação rodar mas não sendo de responsabilidade dela, ou seja, tudo 
+o que for de terceiros.
+
+modules -> onde irá ficar os subdomínios do sistema
