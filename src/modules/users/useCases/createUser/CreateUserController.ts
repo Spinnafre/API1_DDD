@@ -16,7 +16,6 @@ export class CreateUserController extends BaseController {
 
     try {
       const result = await this.useCase.execute(dto);
-      console.log(result)
       if (result.isError) {
         //Irá verificar de qual classe o objeto foi criado
         switch (result.constructor) {
@@ -28,7 +27,6 @@ export class CreateUserController extends BaseController {
             return this.serverError(result.getErrorMessage());
         }
       }
-
       return this.ok(dto);
     } catch (error) {
         return this.serverError(error as Error)

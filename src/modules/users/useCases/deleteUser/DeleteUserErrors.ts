@@ -4,9 +4,7 @@ import { Result } from './../../../../core/logic/Result';
 export namespace DeleteUserErrors{
     export class UserNotExists extends Result<IUseCaseError>{
         constructor(id:string){
-            super(false,{
-                message:`User with Id ${id} not exists`
-            })
+            super(false,`User with Id ${id} not exists`)
         }
 
         public static create(id:string):UserNotExists {
@@ -15,9 +13,7 @@ export namespace DeleteUserErrors{
     }
     export class EmptyOrNullId extends Result<IUseCaseError>{
         constructor(){
-            super(false,{
-                message:`Propertie Id is required`
-            })
+            super(false,`Propertie Id is required`)
         }
 
         public static create():UserNotExists {

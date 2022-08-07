@@ -10,7 +10,7 @@ interface IProps{
 
 export class Guard{
     public static againstNullOrUndefined(argument:any,argumentName:string):IGuardResult{
-        if(argument === null || argument===undefined){
+        if(argument === null || argument===undefined || argument ===''){
             return {
                 succeeded:false,
                 message:`${argumentName} is null or undefined`

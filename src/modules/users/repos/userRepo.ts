@@ -10,7 +10,7 @@ export interface IUserRepository extends IRepository<User>{
     findById(id:string):Promise<User|undefined>
     deleteById(id:string):Promise<void>
 }
-
+//Implementation using whatever ORM or libs
 export class UserRepo implements IUserRepository {
     constructor(){}
 

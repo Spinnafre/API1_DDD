@@ -1,1 +1,0 @@
-Irá ficar os domínios da aplicação e suas regras de negócios

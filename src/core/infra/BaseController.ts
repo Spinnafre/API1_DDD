@@ -1,8 +1,8 @@
 import * as express from 'express'
 
 export abstract class BaseController{
-    protected req:express.Request
-    protected res:express.Response
+    protected req:express.Request|any=null
+    protected res:express.Response|any=null
 
     protected abstract executeImpl():Promise<void|any>
 
