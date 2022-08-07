@@ -28,7 +28,7 @@ export class UserMap{
         }
     }
 
-    public toDomain(props:IPersistence):User{
+    public static toDomain(props:IPersistence):User{
         const userEmail= UserEmail.create(props.user_email)
 
         const userPassword= UserPassword.create({

@@ -8,6 +8,7 @@ export interface IUserRepository extends IRepository<User>{
     findByUsername(username:string):Promise<User|undefined>
     findByEmail(email:UserEmail):Promise<User|undefined>
     findById(id:string):Promise<User|undefined>
+    getAllUsers():Promise<Array<User>>
     deleteById(id:string):Promise<void>
 }
 //Implementation using whatever ORM or libs
@@ -35,6 +36,10 @@ export class UserRepo implements IUserRepository {
     }
 
     public async findByEmail():Promise<User>{
+        throw new Error("Method not implemented.");
+    }
+
+    public async getAllUsers():Promise<Array<User>>{
         throw new Error("Method not implemented.");
     }
 

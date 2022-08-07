@@ -30,8 +30,8 @@ export class Result<T>{
         return this.value
     }
 
-    public getErrorMessage():T{
-        return this.error as T
+    public getErrorMessage():T|any{
+        return this.error as T|any
     }
 
     public static success<U>(value?:U):Result<U>{

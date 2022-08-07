@@ -1,8 +1,10 @@
+import { UserMap } from './../../mappers/userMapper';
 import { IUserRepository } from './../userRepo';
 import { User } from './../../domain/user';
 import { FakeRepository } from '../../../../core/tests/FakeRepository';
 import { UserEmail } from '../../domain/userEmail';
 
+//Also responsible for using Mappers 
 export class UserRepositoryInMemory  extends FakeRepository<User> implements IUserRepository{
     
     constructor(){
@@ -19,6 +21,10 @@ export class UserRepositoryInMemory  extends FakeRepository<User> implements IUs
 
     public async findById(id: string): Promise<User|undefined> {
         return this._items.find((item)=>item.id.toString() === id)
+    }
+
+    public async getAllUsers():Promise<Array<User>>{
+        return this._items
     }
 
     async save(item: User): Promise<User> {
