@@ -1,3 +1,4 @@
+import { IUseCaseError } from './../../../core/logic/UseCaseError';
 import { Guard } from './../../../core/logic/Guard';
 import { Result } from '../../../core/logic/Result';
 import * as bcrypt from 'bcrypt-nodejs';

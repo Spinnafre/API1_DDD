@@ -3,6 +3,8 @@ import { IRepository } from "../../../core/infra/Repository";
 import { UserEmail } from '../domain/userEmail';
 
 export interface IUserRepository extends IRepository<User>{
+    save(item: User): Promise<User>
+    exists(props:User): Promise<boolean>
     findByUsername(username:string):Promise<User|undefined>
     findByEmail(email:UserEmail):Promise<User|undefined>
     findById(id:string):Promise<User|undefined>

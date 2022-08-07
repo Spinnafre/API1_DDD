@@ -1,3 +1,4 @@
+import { IUseCaseError } from './../../../core/logic/UseCaseError';
 import { Result } from './../../../core/logic/Result';
 import { Guard } from './../../../core/logic/Guard';
 import { UniqueIdv4 } from './../../../core/domain/UniqueIdV4';
@@ -8,7 +9,7 @@ import { UserCreatedEvent } from './events/userCreatedEvent';
 
 
 interface UserProps{
-    username:string,
+    username?:string,
     firstName:string,
     lastName:string,
     email:UserEmail,
